@@ -107,12 +107,12 @@ public class ScannerUtil {
              }
          }
      }
-     private static boolean hasAllAlphabetic(String s) {
-         String fullName = scanner.nextLine();
+     private static boolean hasAllAlphabetic(String fullName) {
          int length = fullName.length();
          for (int i = 0; i < length; i++) {
              int c = fullName.charAt(i);
-             if (Character.isAlphabetic(c)) {
+             if (Character.isWhitespace(c)) continue;
+             if (!Character.isAlphabetic(c)) {
                  return false;
              }
          }
