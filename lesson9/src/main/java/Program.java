@@ -1,6 +1,6 @@
 public class Program {
     public static void main(String[] args) {
-        Integer a = 100;
+        Integer a = Integer.valueOf(100);
         Integer b = 100;
         System.out.println(a == b);
 
