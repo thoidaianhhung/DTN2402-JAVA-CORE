@@ -1,14 +1,15 @@
 package com.vti.frontend;
 
+import com.vti.controller.UserController;
 import com.vti.repository.UserRepository;
-
-import java.io.IOException;
-import java.sql.SQLException;
+import com.vti.service.UserService;
 
 public class UserProgram {
-    public static void main(String[] args) throws SQLException, IOException {
+    public static void main(String[] args) {
         UserRepository userRepository = new UserRepository();
-        UserFunction userFunction = new UserFunction(userRepository);
+        UserService service = new UserService(userRepository);
+        UserController controller = new UserController(service);
+        UserFunction userFunction = new UserFunction(controller);
         userFunction.showMenu();
     }
 }
