@@ -19,12 +19,4 @@ public class JdbcUtility {
             return DriverManager.getConnection(url, user, password);
         }
     }
-
-    public static void checkConnection() {
-        try (Connection connection = getConnection()) {
-            System.out.println("Kết nối thành công " + connection.getCatalog());
-        } catch (IOException | SQLException exception) {
-            System.err.println("Kết nối thất bại " + exception.getMessage());
-        }
-    }
 }

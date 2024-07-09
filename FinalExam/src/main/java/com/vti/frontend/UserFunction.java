@@ -31,7 +31,6 @@ public class UserFunction {
                 default:
                     System.out.println("Cảm ơn bạn đã dùng chương trình");
                     return;
-
             }
         }
     }
